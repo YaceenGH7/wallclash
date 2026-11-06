@@ -1,0 +1,13 @@
+# Deploy the Node/WebSocket backend on Render's free web service plan.
+# Rooms live in memory, so keep exactly one instance and do not scale out.
+services:
+  - type: web
+    name: wall-clash-online
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22"

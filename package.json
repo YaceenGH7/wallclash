@@ -1,0 +1,16 @@
+{
+  "name": "wall-clash",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Wall Clash - a 1v1 wall strategy game (Quoridor-style) with AI and online play",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/engine.test.js",
+    "test:online": "node test/net-smoke.mjs",
+    "simulate:ai": "node test/ai-sim.js"
+  },
+  "dependencies": {
+    "ws": "^8.22.1"
+  }
+}
